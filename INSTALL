@@ -1,0 +1,26 @@
+To build the 3DO 'Opera' filesystem driver kernel module, you need to have
+the following:
+* The sources of the Linux kernel for which you are building the module.
+  In the instructions below, replace /path/to/kernel_sources by the
+  path to the actual root directory of your kernel sources.
+* Standard build tools normally used to build a kernel (make, gcc, etc.).
+
+
+Build the kernel module for the 3DO 'Opera' filesystem driver like this:
+	make -C /path/to/kernel_sources M=$PWD modules
+
+Load the module (as root), through:
+	insmod operafs.ko
+
+You can also install the module with your other kernel modules:
+	make -C /path/to/kernel_sources M=$PWD modules_install
+after which you can load the module with:
+	modprobe operafs
+
+Now you can mount Opera file systems like any other file system.
+You usually need to be root for this.
+From a CD-ROM:
+	mount -t opera /dev/cdrom /mnt/cdrom
+From a CD-ROM disk image:
+	mount -t opera -o loop mycd.iso /mnt/cdrom
+

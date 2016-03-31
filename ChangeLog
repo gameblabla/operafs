@@ -1,0 +1,12 @@
+1.2, 2010-03-27
+- Updated for newer kernels.
+
+1.1, 2008-03-23
+- Updated for modern kernels.
+
+1.0b2, 2005-12-14
+- Fixed one (harmless) compiler warning.
+
+1.0b, 2004-10-26
+- First beta.
+
